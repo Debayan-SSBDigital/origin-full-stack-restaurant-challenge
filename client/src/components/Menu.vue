@@ -55,10 +55,9 @@ const layout = ref('grid');
 
 onMounted(async () => {
     // fetch data from server
-    const URL = "http://13.57.32.216:8443/api/plates"
+    const URL = "https://localhost:8443/api/plates"
     const response = await fetch(URL);
     const data = await response.json();
-    console.log(data);
     plates.value = data;
 });
 
